@@ -3,7 +3,8 @@ import logoMonito from "./images/logoMonito.png"
 import lupa from "./images/lupa.png"
 import logoVnd from "./images/logoVnd.png"
 import arrowBottom from "./images/arrowBottom.png"
-import playLogo from './images/playLogo.png'
+import playLogo from "./images/playLogo.png"
+
 export default function Home() {
   return (
     <div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>

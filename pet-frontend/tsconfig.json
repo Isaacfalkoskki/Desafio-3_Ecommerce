@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "../pet-backend/uploads/imagesDogs"  ]
 }

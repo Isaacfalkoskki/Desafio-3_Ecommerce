@@ -1,67 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import { Pet } from '../types/Pet';
+import { Pet } from "../types/Pet";
 
-interface Props {
-  pet: Pet;
-}
+export const PetCard = ({ pet }: { pet: Pet }) => (
+  <div style={{
+    backgroundColor: "#F7F7F7",
+    borderRadius: "10px",
+    alignContent: "center"
+  }}>
+    <img
+      src={pet.image_url} 
+      alt={pet.name}
+      style={{
+        width: "90%",
+        padding: "10px 10px 10px 18px"
+      }}
+    />
+    <h2 style={{
+      fontSize: "21px",
+      fontWeight: "700",
+      paddingBottom: "10px",
+      paddingLeft: "10px"
+    }}>{pet.name}</h2>
 
-const fetchPets = async () => {
-  try {
-    const response = await fetch('/pets');
-    if (!response.ok) {
-      throw new Error(`Erro: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error('Erro ao buscar pets:', error);
-    throw error;
-  }
-}
+    <div>
+      <span style={{
+        fontSize: "16px",
+        fontWeight: "700",
+        color: "#667479",
+        paddingLeft: "10px",
+        paddingRight: "10px"
+      }}>Gene: {pet.gender === 'MALE' ? 'Male' : 'Female'}</span>•
 
+      <span style={{
+        paddingLeft: "10px",
+        fontSize: "16px",
+        fontWeight: "700",
+        color: "#667479"
+      }}>Age: {pet.age.toString().padStart(2, '0')} months</span>
+    </div>
 
- 
-
-const PetCard:React.FC<Props> = ({ pet: Pet }) => {
-
-  const [pets, setPets] = useState<Pet[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetchPets()
-      .then(setPets)
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
-
-
-
-  return (
-    <ul>
-
-      {pets.map((pet) => (
-<li key={pet.id}>{pet.name} ({pet.price})</li>
-
-      ))}
-</ul>
- 
-  )
-  
-}
-
-export default PetCard
-
-
-/*
-const PetCard: React.FC<Props> = ({ pet }) => (
-  <div className="bg-white shadow-lg rounded-xl overflow-hidden p-3">
-    <img src={pet.imageUrl} alt={pet.name} className="h-48 w-full object-cover rounded-md mb-2" />
-    <p className="text-sm text-gray-500">{pet.code}</p>
-    <h3 className="font-bold">{pet.name}</h3>
-    <p className="text-gray-600">{pet.gender} • {pet.age}</p>
-    <p className="text-blue-600 font-bold">{pet.price.toLocaleString()} VND</p>
+    <p style={{
+      paddingLeft: "10px",
+      fontSize: "16px",
+      fontWeight: "700",
+      paddingTop: "10px",
+      paddingBottom: "20px"
+    }}> {pet.price.toLocaleString('vi-VN')} VND
+    </p>
   </div>
 );
-
-export default PetCard;*/
