@@ -3,8 +3,13 @@ import arrowRight from "./images/arrowRight.png"
 import bannerPetSection from "./images/BannerPetSection.png"
 import playLogo from "./images/playLogo.png"
 import { PetList } from './PetList';
+import { useNavigate } from 'react-router-dom';
 
 export default function PetSection () {
+
+  const navigate = useNavigate();
+
+
   return (
     <>
 
@@ -56,7 +61,7 @@ export default function PetSection () {
       borderRadius: "30px",
       cursor: "pointer",
       gap: "10px"
-    }}>
+    }} onClick={() => window.open('/filtros', "_blank") }>
       View More
       <img src={arrowRight} style={{
         height: "10px"
@@ -80,22 +85,26 @@ export default function PetSection () {
     
     
 
-    <div style={{ position: "relative", width: "100%", height: "auto" }}>
+    <div style={{ 
+      position: "relative", 
+      width: "100%", 
+      height: "auto",
+      paddingTop: "70px" }}>
   <img src={bannerPetSection} style={{
     height: "100%",
     width: "100%",
-    display: "block", // evita espaçamento embaixo
+    display: "block",
     zIndex: 0
   }} />
 
   <div style={{
     paddingRight: "100px",
   position: "absolute",
-  top: "20%",      // distância do topo da imagem
-  right: "10px",   // distância da borda direita
+  top: "20%",
+  right: "10px", 
   zIndex: 1,
   color: "#003459",
-  textAlign: "right", // <-- alinha o conteúdo para a direita
+  textAlign: "right",
  
 }}>
   <h1 style={{

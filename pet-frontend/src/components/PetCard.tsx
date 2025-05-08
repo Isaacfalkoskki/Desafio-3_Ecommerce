@@ -6,14 +6,21 @@ export const PetCard = ({ pet }: { pet: Pet }) => (
     borderRadius: "10px",
     alignContent: "center"
   }}>
+    <a key={pet.sku}
+    href={`/pets/${pet.sku}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      textDecoration: "none",
+      color: "inherit"
+    }}>
     <img
       src={pet.image_url} 
       alt={pet.name}
       style={{
         width: "90%",
         padding: "10px 10px 10px 18px"
-      }}
-    />
+      }}/></a>
     <h2 style={{
       fontSize: "21px",
       fontWeight: "700",

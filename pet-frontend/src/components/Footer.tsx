@@ -1,4 +1,9 @@
 import React from 'react';
+import logoFacebook from "./images/logoFacebook.png"
+import logoTwitter from "./images/logoTwitter.png"
+import logoInstagram from "./images/logoInstagram.png"
+import logoYoutube from "./images/logoYoutube.png"
+import logoMonito from "./images/logoMonito.png"
 
 export default function Footer() {
   return (
@@ -11,6 +16,8 @@ export default function Footer() {
     display: "flex",
     justifyContent: "center",
     padding: "30px",
+    marginTop: "50px",
+    paddingTop: "80px"
   }}>
     <div style={{
       backgroundColor: "#003459",
@@ -69,23 +76,91 @@ export default function Footer() {
     backgroundColor: "#FFE7BA", // mesmo fundo para integrar visualmente
     padding: "20px 0",
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "space-around",
+    paddingLeft: "300px",
+    paddingRight: "400px",
+    paddingBottom: "60px"
+    
   }}>
     <nav style={{
       display: "flex",
       gap: "20px",
       listStyle: "none",
       fontSize: "16px",
-      fontWeight: "700"
+      fontWeight: "700",
     }}>
-      <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#home">Home</a></li>
-      <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#category">Category</a></li>
-      <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#about">About</a></li>
-      <li><a style={{ textDecoration: "none", paddingLeft: "50px", marginRight: "50px"}} href="#contact">Contact</a></li>
+      <li><a style={{ 
+        textDecoration: "none", 
+        paddingRight: "50px", 
+        paddingLeft: "100px",
+        color: "#00171F" }} href="#home">Home</a></li>
+      <li><a style={{ 
+        textDecoration: "none", 
+        paddingRight: "50px",
+        color: "#00171F" }} href="#category">Category</a></li>
+      <li><a style={{ 
+        textDecoration: "none", 
+        paddingRight: "50px",
+        color: "#00171F" }} href="#about">About</a></li>
+      <li><a style={{ 
+        textDecoration: "none",
+        color: "#00171F" }} href="#contact">Contact</a></li>
     </nav>
+
+    <div style={{
+      display: "flex",
+      justifyContent: "space-between",
+      gap: "40px"
+    }}>
+<img src={logoFacebook} />
+<img src={logoTwitter} />
+<img src={logoInstagram} />
+<img src={logoYoutube} />
+
+
+    </div>
+   
   </div>
 
 
+<footer style={{
+  backgroundColor: "#FFE7BA",
+  padding: "20px 0",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  paddingLeft: "300px",
+  paddingRight: "400px",
+  borderTop: "1px solid black",
+  
+}}>
+
+<p style={{
+  fontSize: "14px",
+  fontWeight: "500",
+  color: "#667479",
+  paddingLeft: "100px"
+}}>&copy; 2022 Monito. All rights reserved.</p>
+
+<img src={logoMonito} style={{
+  width: "150px"
+}}/>
+
+<div>
+  <a href="#" style={{
+    textDecoration: "none", 
+    color: "#667479",
+    paddingRight: "30px"
+  }}>Terms of Service</a>
+
+  <a href="#" style={{
+    textDecoration: "none", 
+    color: "#667479",
+  }}>Privacy Policy</a>
+</div>
+
+
+</footer>
 
 
 

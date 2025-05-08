@@ -9,7 +9,6 @@ export const PetGrid = ({ pets }: { pets: Pet[] }) => {
     return (
       <div style={{
           paddingTop: "30px",
-      paddingBottom: "70px",
         display: "grid",
         gridTemplateColumns: "1fr 1fr 1fr 1fr",
         gap: "20px"

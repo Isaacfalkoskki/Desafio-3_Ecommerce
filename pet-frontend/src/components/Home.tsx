@@ -41,11 +41,34 @@ export default function Home() {
 >
   <img src={logoMonito} height={50} alt="Logo Monito" />
 
-  <nav style={{ display: "flex", gap: "20px", listStyle: "none", fontSize: "16px", fontWeight: "700" }}>
-    <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#home">Home</a></li>
-    <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#category">Category</a></li>
-    <li><a style={{ textDecoration: "none", paddingLeft: "50px" }} href="#about">About</a></li>
-    <li><a style={{ textDecoration: "none", paddingLeft: "50px", marginRight: "50px"}} href="#contact">Contact</a></li>
+  <nav style={{ 
+    display: "flex", 
+    gap: "20px", 
+    listStyle: "none", 
+    fontSize: "16px", 
+    fontWeight: "700" }}>
+
+    <li><a style={{ 
+        textDecoration: "none", 
+        paddingLeft: "50px",
+        color: "#003459" }} href="#home">Home</a></li>
+
+    <li><a style={{ 
+        textDecoration: "none", 
+        paddingLeft: "50px",
+        color: "#003459" }} href="#category">Category</a></li>
+
+    <li><a style={{ 
+        textDecoration: "none", 
+        paddingLeft: "50px",
+        color: "#003459" }} href="#about">About</a></li>
+
+    <li><a style={{ 
+        textDecoration: "none", 
+        paddingLeft: "50px", 
+        marginRight: "50px",
+        color: "#003459"}} href="#contact">Contact</a></li>
+
   </nav>
 
   <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>

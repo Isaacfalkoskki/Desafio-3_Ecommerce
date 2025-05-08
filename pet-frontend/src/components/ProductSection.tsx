@@ -1,29 +1,86 @@
 import React from 'react';
+import { ProductsList } from './ProductList';
+import arrowRight from "./images/arrowRight.png";
 
-const products = [
-  { name: 'Reflex Plus Cat Food', price: '140,000 VND', image: '/images/product1.jpg' },
-  { name: 'Cat Scratching Ball', price: '120,000 VND', image: '/images/product2.jpg' },
-  { name: 'Cute Pet Toy', price: '60,000 VND', image: '/images/product3.jpg' },
-];
 
-const ProductSection: React.FC = () => {
-  return (
-    <section className="py-10 px-6 bg-gray-50">
-      <h2 className="text-2xl font-bold text-blue-900 mb-4">Our Products</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((product, index) => (
-          <div key={index} className="bg-white shadow rounded-lg overflow-hidden">
-            <img src={product.image} alt={product.name} className="w-full h-40 object-cover" />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold">{product.name}</h3>
-              <p className="text-sm text-gray-600">{product.price}</p>
-              <button className="mt-2 px-3 py-1 text-sm bg-yellow-400 text-white rounded-full">Free Toy & Free Shaker</button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+export default function ProductSection() {
+  return ( 
+    <>
+    
+    
+    <div style={{
+  paddingLeft: "200px",
+  paddingTop: "70px",
+  paddingRight: "200px"
+}}>
+    <p style={{
+      fontSize: "16px",
+      fontWeight: "500",
+      paddingBottom: "10px"
+    }}>
+      Hard to choose right products for your pets?
+    </p>
 
-export default ProductSection;
+    <header style={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "start"
+      
+    }}>
+
+
+<div>
+    <h2 style={{
+      fontSize: "24px",
+      fontWeight: "700",
+      color: "#003459"
+    }}>
+      Our Products
+    </h2>
+    </div>
+
+    <div>
+    <a href="#" style={{
+    textDecoration: "none"
+  }}>
+    <button style={{
+      border: "2px solid #003459",
+      padding: "10px 30px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      fontSize: "16px",
+      fontWeight: "500",
+      backgroundColor: "transparent",
+      borderRadius: "30px",
+      cursor: "pointer",
+      gap: "10px"
+    }}>
+      View More
+      <img src={arrowRight} style={{
+        height: "10px"
+      }} />
+    </button>
+  </a>
+
+    </div>
+
+    </header>
+    
+    
+    
+    </div>
+    
+    <ProductsList />
+    
+    
+    
+    </>
+
+
+  )
+}
+
+      
+
+
