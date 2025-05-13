@@ -1,0 +1,66 @@
+[
+  {
+    "sku": "1",
+    "name": "Reflex Plus Adult Cat Food Salmon",
+    "product_type": "Dog Food",
+    "size": "385gm",
+    "price": 140000,
+    "image_url": "/uploads/FoodZealand.png"
+  },
+  {
+    "sku": "2",
+    "name": "Reflex Plus Adult Cat Food Salmon",
+    "product_type": "Cat Food",
+    "size": "1.5kg",
+    "price": 165000,
+    "image_url": "/uploads/FoodReflex.png"
+  },
+  {
+    "sku": "3",
+    "name": "Cat scratching ball toy kitten sisal rope ball",
+    "product_type": "Toy",
+    "size": "40cm",
+    "price": 1100000,
+    "image_url": "/uploads/ToyRopeBall.png"
+  },
+  {
+    "sku": "4",
+    "name": "Cute Pet Cat Warm Nest",
+    "product_type": "Toy",
+    "size": "55cm",
+    "price": 410000,
+    "image_url": "/uploads/ToyWarmNest.png"
+  },
+  {
+    "sku": "5",
+    "name": "NaturVet Dogs - Omega-Gold Plus Salmon Oil",
+    "product_type": "Dog Food",
+    "size": "385gm",
+    "price": 350000,
+    "image_url": "/uploads/FoodNaturVet.png"
+  },
+  {
+    "sku": "6",
+    "name": "Costumes Fashion Pet Clother Cowboy Rider",
+    "product_type": "Costume",
+    "size": "1.5kg",
+    "price": 500000,
+    "image_url": "/uploads/CostumeCowboy.png"
+  },
+  {
+    "sku": "7",
+    "name": "Costumes Chicken Drumsti ck Headband",
+    "product_type": "Costume",
+    "size": "25cm",
+    "price": 400000,
+    "image_url": "/uploads/CostumeChicken.png"
+  },
+  {
+    "sku": "8",
+    "name": "Plush Pet Toy",
+    "product_type": "Toy",
+    "size": "30cm",
+    "price": 250000,
+    "image_url": "/uploads/ToyPlush.png"
+  }
+]
