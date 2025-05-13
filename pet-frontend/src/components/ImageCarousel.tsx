@@ -5,10 +5,12 @@ interface ImageCarouselProps {
 }
 
 export const ImageCarousel = ({ images }: ImageCarouselProps) => {
+
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-     const interval = setInterval(() => {
+    const interval = setInterval(() => {
+
       if (carouselRef.current) {
         const { scrollLeft, clientWidth, scrollWidth } = carouselRef.current;
         const maxScrollLeft = scrollWidth - clientWidth;
@@ -19,12 +21,14 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
           carouselRef.current.scrollBy({ left: 350, behavior: "smooth" });
         }
       }
-    }, 3000);// A cada 3 segundos
+    }, 2000);
 
     return () => clearInterval(interval);
+
   }, []);
 
   return (
+
     <div style={{
       overflowX: "auto",
       display: "flex",
@@ -32,8 +36,8 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
       scrollBehavior: "smooth",
       scrollbarWidth: "none",
       msOverflowStyle: "none",
-      padding: "20px 0"
-    }} ref={carouselRef}>
+      padding: "20px 0" }} ref={carouselRef}>
+
       {images.map((src, index) => (
         <img
           key={index}
@@ -44,10 +48,10 @@ export const ImageCarousel = ({ images }: ImageCarouselProps) => {
             height: "auto",
             borderRadius: "10px",
             flexShrink: 0,
-            objectFit: "cover"
-          }}
-        />
+            objectFit: "cover" }}/>
       ))}
+
     </div>
+    
   );
 };

@@ -10,7 +10,7 @@ export class PetService {
   constructor(
     @InjectRepository(Pets)
     private readonly petRepository: Repository<Pets>,
-  ) {}
+  ) { }
 
   async create(createPetDTO: CreatePetDto): Promise<Pets> {
     const pet = this.petRepository.create(createPetDTO);
@@ -18,7 +18,7 @@ export class PetService {
   }
 
   async getPets(filterPetsDto: FilterPetsDto): Promise<Pets[]> {
-    const { gender, size, vaccinated, maxPrice } = filterPetsDto;
+    const { gender, size, vaccinated } = filterPetsDto;
     const queryBuilder = this.petRepository.createQueryBuilder('pet');
 
     if (gender) {
@@ -31,10 +31,6 @@ export class PetService {
 
     if (vaccinated !== undefined) {
       queryBuilder.andWhere('pet.vaccinated = :vaccinated', { vaccinated: vaccinated === true });
-    }
-
-    if (maxPrice) {
-      queryBuilder.andWhere('pet.price <= :maxPrice', { maxPrice: parseFloat(maxPrice) });
     }
 
     return await queryBuilder.getMany();

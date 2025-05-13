@@ -3,19 +3,24 @@ import { Pet } from "../types/Pet";
 import { PetCard } from "./PetCard";
 
 export const PetGrid = ({ pets }: { pets: Pet[] }) => {
-    // Limita a 8 pets
-    const limitedPets = pets.slice(0, 8);
-  
-    return (
-      <div style={{
-          paddingTop: "30px",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr 1fr",
-        gap: "20px"
+
+  const limitedPets = pets.slice(0, 8);
+
+  return (
+
+    <div style={{
+      paddingTop: "30px",
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr 1fr 1fr",
+      gap: "20px"
       }}>
-        {limitedPets.map(pet => (
-          <PetCard key={pet.sku} pet={pet} />
-        ))}
-      </div>
-    );
-  };
+
+      {limitedPets.map(pet => (
+        <PetCard key={pet.sku} pet={pet} />
+      ))}
+
+    </div>
+
+  );
+  
+};

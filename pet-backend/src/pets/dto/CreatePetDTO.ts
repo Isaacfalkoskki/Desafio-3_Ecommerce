@@ -1,6 +1,4 @@
 import { IsBoolean, IsDateString, IsEnum, IsNumber, IsOptional, IsString } from "class-validator";
-import { Column } from "typeorm";
-
 
 export class CreatePetDto {
     @IsNumber()
@@ -43,15 +41,6 @@ export class CreatePetDto {
     @IsEnum(['CAT', 'DOG'])
     product_type: 'CAT' | 'DOG';
   
-    // Você pode remover esses se forem gerados automaticamente no backend
-    @IsOptional()
-    @IsDateString()
-    created_at?: Date;
-  
-    @IsOptional()
-    @IsDateString()
-    updated_at?: Date;
-
     @IsString()
 image_url: string;
   }

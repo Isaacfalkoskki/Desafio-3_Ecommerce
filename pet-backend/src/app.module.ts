@@ -6,9 +6,10 @@ import { AppController } from './app.controller';
 import { Pets } from './pets/pet.entity';
 import { PetsModule } from './pets/pets.module';
 import { ProductsModule } from './products/products.module';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { join } from 'path';
 import { Products } from './products/products.entity';
+import { FormModule } from './Form/form.module';
+import { Form } from './Form/form.entity';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -22,14 +23,15 @@ import { Products } from './products/products.entity';
       username: 'root',
       password: '',
       database: 'petshop',
-      entities: [Pets, Products],
+      entities: [Pets, Products, Form],
       synchronize: false,
     }),
-    TypeOrmModule.forFeature([Pets, Products]),
+    TypeOrmModule.forFeature([Pets, Products, Form]),
     PetsModule,
     ProductsModule,
+    FormModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
